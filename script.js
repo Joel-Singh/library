@@ -12,6 +12,10 @@ function Book(title, author, pages, isRead) {
   };
 }
 
+Book.prototype.toggleRead = function() {
+  this.isRead = this.isRead ? false : true;
+}
+
 function addBookToLibrary(book) {
   myLibrary.push(book);
 }
