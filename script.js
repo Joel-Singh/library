@@ -17,7 +17,7 @@ function addBookToLibrary(book) {
 }
 
 function showLibraryOnHTML() {
-  function addBookToDOM(book) {
+  function addBookToDOM(book, index) {
     const newBook = document.createElement("div");
     newBook.classList.add("card");
     const title = document.createElement("h1");
@@ -37,12 +37,22 @@ function showLibraryOnHTML() {
     isRead.textContent = isReadString;
     newBook.append(isRead);
 
+    const removeButton = document.createElement("button");
+    removeButton.setAttribute("type", "button");
+    removeButton.setAttribute("data-book-index", index);
+    removeButton.textContent = "REMOVE BOOK";
+    removeButton.addEventListener("click", () => {
+      myLibrary.splice(removeButton.getAttribute("data-book-index"), 1);
+      showLibraryOnHTML();
+    });
+    newBook.append(removeButton);
+
     cardContainer.append(newBook);
   }
 
   cardContainer.innerHTML = "";
-  myLibrary.forEach((book) => {
-    addBookToDOM(book);
+  myLibrary.forEach((book, index) => {
+    addBookToDOM(book, index);
   });
 }
 
