@@ -51,6 +51,16 @@ function showLibraryOnHTML() {
     });
     newBook.append(removeButton);
 
+    const toggleReadBtn = document.createElement("button");
+    toggleReadBtn.setAttribute("type", "button");
+    toggleReadBtn.setAttribute("data-book-index", index);
+    toggleReadBtn.textContent = "TOGGLE READ STATUS";
+    toggleReadBtn.addEventListener("click", () => {
+      myLibrary[toggleReadBtn.getAttribute("data-book-index")].toggleRead();
+      showLibraryOnHTML();
+    });
+    newBook.append(toggleReadBtn);
+
     cardContainer.append(newBook);
   }
 
