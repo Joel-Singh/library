@@ -46,11 +46,13 @@ function showLibraryOnHTML() {
   })
 }
 
-// atomic = new Book("Atomic Habits", "James Clear", 392, false);
-// blueDragon = new Book("Baby Blue Dragon", "The Knight", 62, true);
-// skulls = new Book("Human Skulls", "The Grim Reaper", 666, false);
-// computer = new Book("Super Cool Computers", "Ed Sheeran", 3998, false);
-// addBookToDOM(atomic);
-// addBookToDOM(blueDragon);
-// addBookToDOM(skulls);
-// addBookToDOM(computer);
+atomic = new Book("Atomic Habits", "James Clear", 392, false);
+blueDragon = new Book("Baby Blue Dragon", "The Knight", 62, true);
+skulls = new Book("Human Skulls", "The Grim Reaper", 666, false);
+computer = new Book("Super Cool Computers", "Ed Sheeran", 3998, false);
+
+addBookToLibrary(atomic);
+addBookToLibrary(blueDragon);
+addBookToLibrary(skulls);
+addBookToLibrary(computer);
+showLibraryOnHTML();
