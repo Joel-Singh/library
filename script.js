@@ -1,3 +1,5 @@
+let myLibrary = [];
+
 function Book(title, author, pages, isRead) {
   this.title = title;
   this.author = author;
@@ -7,4 +9,8 @@ function Book(title, author, pages, isRead) {
     isReadString = isRead ? "read" : "not read yet";
     return `${title}, by ${author}, ${pages} pages, ${isReadString}`;
   };
+}
+
+function addBookToLibrary(book) {
+  myLibrary.push(book);
 }
