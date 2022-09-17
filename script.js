@@ -43,7 +43,7 @@ function showLibraryOnHTML() {
   cardContainer.innerHTML = "";
   myLibrary.forEach((book) => {
     addBookToDOM(book);
-  })
+  });
 }
 
 atomic = new Book("Atomic Habits", "James Clear", 392, false);
