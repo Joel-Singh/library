@@ -46,6 +46,19 @@ function showLibraryOnHTML() {
   });
 }
 
+document.querySelector("button").addEventListener("click", () => {
+  const title = document.querySelector("#title").value;
+  const author = document.querySelector("#author").value;
+  const pages = document.querySelector("#pages").value;
+  const isRead = document.querySelector("#isRead").checked;
+
+  document.querySelector("form").reset();
+
+  const newBook = new Book(title, author, pages, isRead);
+  addBookToLibrary(newBook);
+  showLibraryOnHTML();
+});
+
 atomic = new Book("Atomic Habits", "James Clear", 392, false);
 blueDragon = new Book("Baby Blue Dragon", "The Knight", 62, true);
 skulls = new Book("Human Skulls", "The Grim Reaper", 666, false);
