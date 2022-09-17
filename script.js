@@ -16,30 +16,30 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
-function addBookToDOM(book) {
-  const newBook = document.createElement("div");
-  newBook.classList.add("card");
-  const title = document.createElement("h1");
-  title.textContent = book.title;
-  newBook.append(title);
-
-  const author = document.createElement("p");
-  author.textContent = book.author;
-  newBook.append(author);
-
-  const pages = document.createElement("p");
-  pages.textContent = `Pages: ${book.pages}`;
-  newBook.append(pages);
-
-  const isRead = document.createElement("p");
-  isReadString = book.isRead ? "Has been read" : "Has not been read";
-  isRead.textContent = isReadString;
-  newBook.append(isRead);
-
-  cardContainer.append(newBook);
-}
-
 function showLibraryOnHTML() {
+  function addBookToDOM(book) {
+    const newBook = document.createElement("div");
+    newBook.classList.add("card");
+    const title = document.createElement("h1");
+    title.textContent = book.title;
+    newBook.append(title);
+
+    const author = document.createElement("p");
+    author.textContent = book.author;
+    newBook.append(author);
+
+    const pages = document.createElement("p");
+    pages.textContent = `Pages: ${book.pages}`;
+    newBook.append(pages);
+
+    const isRead = document.createElement("p");
+    isReadString = book.isRead ? "Has been read" : "Has not been read";
+    isRead.textContent = isReadString;
+    newBook.append(isRead);
+
+    cardContainer.append(newBook);
+  }
+
   cardContainer.innerHTML = "";
   myLibrary.forEach((book) => {
     addBookToDOM(book);
