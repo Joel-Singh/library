@@ -24,6 +24,7 @@ function showLibraryOnHTML() {
   function addBookToDOM(book, index) {
     const newBook = document.createElement("div");
     newBook.classList.add("card");
+
     const title = document.createElement("h1");
     title.textContent = book.title;
     newBook.append(title);
