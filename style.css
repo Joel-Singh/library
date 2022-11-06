@@ -1,6 +1,12 @@
+:root {
+  --grey: hsl(40, 0%, 58%);
+}
+
 body {
   margin: 0;
+  background-color: var(--grey);
 }
+
 h1,
 p {
   margin: 0;
