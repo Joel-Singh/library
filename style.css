@@ -22,7 +22,6 @@ p {
   padding: 13px;
   margin: 10px;
   background-color: var(--black);
-  height: calc(max-content + 30px);
   display: flex;
   flex-direction: column;
 }
