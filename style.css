@@ -36,6 +36,11 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
+  border-radius: 30px;
+  outline: white solid 0px;
+  border-style: solid;
+  border-color: white;
+  border-left-width: 30px;
 }
 
 .card > h1 {
