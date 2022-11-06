@@ -21,7 +21,7 @@ p {
   box-sizing: border-box;
   padding: 13px;
   margin: 10px;
-  background-color: firebrick;
+  background-color: var(--black);
   height: calc(max-content + 30px);
   display: flex;
   flex-direction: column;
