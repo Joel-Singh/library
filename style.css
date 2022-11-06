@@ -27,6 +27,13 @@ p {
   flex-direction: column;
 }
 
+.card > h1 {
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
 form {
   display: flex;
   flex-direction: column;
