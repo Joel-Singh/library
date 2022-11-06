@@ -75,6 +75,14 @@ p {
   letter-spacing: 1px;
 }
 
+.card > button:hover {
+  background-color: white;
+}
+
+.card > button:active {
+  background-color: yellow;
+}
+
 form {
   display: flex;
   flex-direction: column;
