@@ -21,7 +21,7 @@ function addBookToLibrary(book) {
 }
 
 function showLibraryOnHTML() {
-  function addBookToDOM(book, index) {
+  function createDOMBook(book, index) {
     const newBook = document.createElement("div");
     newBook.classList.add("card");
 
@@ -61,8 +61,10 @@ function showLibraryOnHTML() {
       showLibraryOnHTML();
     });
     newBook.append(toggleReadBtn);
-
-    cardContainer.append(newBook);
+    return newBook;
+  }
+  function addBookToDOM(book, index) {
+    cardContainer.append(createDOMBook(book, index));
   }
 
   cardContainer.innerHTML = "";
