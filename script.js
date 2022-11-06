@@ -27,16 +27,20 @@ function showLibraryOnHTML() {
 
     const title = document.createElement("h1");
     title.textContent = book.title;
+    title.classList.add('title')
 
     const author = document.createElement("p");
     author.textContent = book.author;
+    author.classList.add('author')
 
     const pages = document.createElement("p");
     pages.textContent = `Pages: ${book.pages}`;
+    pages.classList.add('pages')
 
     const isRead = document.createElement("p");
     isReadString = book.isRead ? "Has been read" : "Has not been read";
     isRead.textContent = isReadString;
+    pages.classList.add('is-read')
 
     const removeButton = document.createElement("button");
     removeButton.setAttribute("type", "button");
@@ -46,6 +50,7 @@ function showLibraryOnHTML() {
       myLibrary.splice(removeButton.getAttribute("data-book-index"), 1);
       showLibraryOnHTML();
     });
+    removeButton.classList.add('remove-button')
 
     const toggleReadBtn = document.createElement("button");
     toggleReadBtn.setAttribute("type", "button");
@@ -55,6 +60,7 @@ function showLibraryOnHTML() {
       myLibrary[toggleReadBtn.getAttribute("data-book-index")].toggleRead();
       showLibraryOnHTML();
     });
+    toggleReadBtn.classList.add('toggle-read-button')
 
     const newBookElements = [title, author, pages, isRead, removeButton, toggleReadBtn]
     newBook.append(...newBookElements)
