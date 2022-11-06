@@ -35,6 +35,10 @@ p {
   font-family: "Times New Roman";
 }
 
+.card > p {
+  font-family: "Courier New";
+}
+
 form {
   display: flex;
   flex-direction: column;
