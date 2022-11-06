@@ -63,13 +63,10 @@ function showLibraryOnHTML() {
     newBook.append(toggleReadBtn);
     return newBook;
   }
-  function addBookToDOM(book, index) {
-    cardContainer.append(createDOMBook(book, index));
-  }
 
   cardContainer.innerHTML = "";
   myLibrary.forEach((book, index) => {
-    addBookToDOM(book, index);
+    cardContainer.append(createDOMBook(book, index));
   });
 }
 
