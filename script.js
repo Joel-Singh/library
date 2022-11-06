@@ -45,7 +45,7 @@ function showLibraryOnHTML() {
     const removeButton = document.createElement("button");
     removeButton.setAttribute("type", "button");
     removeButton.setAttribute("data-book-index", index);
-    removeButton.textContent = "REMOVE BOOK";
+    removeButton.textContent = "Remove";
     removeButton.addEventListener("click", () => {
       myLibrary.splice(removeButton.getAttribute("data-book-index"), 1);
       showLibraryOnHTML();
@@ -55,7 +55,7 @@ function showLibraryOnHTML() {
     const toggleReadBtn = document.createElement("button");
     toggleReadBtn.setAttribute("type", "button");
     toggleReadBtn.setAttribute("data-book-index", index);
-    toggleReadBtn.textContent = "TOGGLE READ STATUS";
+    toggleReadBtn.textContent = "Toggle";
     toggleReadBtn.addEventListener("click", () => {
       myLibrary[toggleReadBtn.getAttribute("data-book-index")].toggleRead();
       showLibraryOnHTML();
