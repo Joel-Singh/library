@@ -1,5 +1,6 @@
 :root {
   --grey: hsl(40, 0%, 58%);
+  --black: hsl(0, 0%, 19%);
 }
 
 body {
@@ -15,6 +16,7 @@ p {
   font-size: 1rem;
   color: white;
 }
+
 .card {
   box-sizing: border-box;
   padding: 13px;
